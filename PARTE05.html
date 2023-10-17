@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTES</title>
+    <link rel="stylesheet" href="PARTE05.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,600&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Menu do Erick -->
+    <div id="menu">
+        <div id="logo">
+            <img src="Brasao_Governo_branco_500.png" width="150" alt="logo-aqui">
+        </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="PARTE05.html">Cadastro de Sistemas</a>
+        </nav>
+
+    </div>
+    <!-- Fim do Menu do Erick -->
+
+
+    <div id="conteudo">
+        <div class="modal-container">
+            <div class="modal">
+                <h1>Cadastrar Sistemas</h1>
+
+                <img src="/Brasao_Governo_colorido_500.png" alt="brasao" class="logo">
+                <form class="catalogar" action="#">
+                    <label for="nome">Nome do Software: <span style="color: rgb(255, 0, 0);"> *</span> </label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br><br>
+
+                    <label for="versao">Versão:</label>
+                    <input type="text" id="versao" name="versao">
+                    <br><br>
+
+                    <label for="descricao">Descrição: <span style="color: rgb(255, 0, 0);"> *</span> </label>
+                    <textarea type="text" id="descricao" name="descricao" required></textarea>
+                    <br><br>
+
+                    <label for="categoria">Selecione uma Categoria: <span style="color: rgb(255, 0, 0);"> *</span>
+                    </label>
+                    <select id="categoria" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="assistencia_farmacêutica">Assistência Farmacêutica</option>
+                        <option value="atencao_especializada">Atenção Especializada</option>
+                        <option value="atencao_hospitalar">Atenção Hospitalar</option>
+                        <option value="doacao_orgaos_sangue_e_transplante">Doação de órgãos, sangue e transplante
+                        </option>
+                        <option value="educacional">Educacional</option>
+                        <option value="gerencial">Gerencial</option>
+                        <option value="informatica">Informática</option>
+                        <option value="judicializacao">Judicialização</option>
+                        <option value="logistico">Logístico</option>
+                        <option value="outros">Outros</option>
+                        <option value="prontuario_eletronico">Prontuário Eletrônico</option>
+                        <option value="regulacao">Regulação</option>
+                        <option value="telessaude">Telessaúde</option>
+                        <option value="vigilancia_ambiental">Vigilância Ambiental</option>
+                        <option value="vigilancia_epidemiologica">Vigilância Epidemiológica</option>
+                        <option value="vigilancia_laboratorial">Vigilância Laboratorial</option>
+                        <option value="vigilicia_sanitaria">Vigilância Sanitária</option>
+                    </select> <br><br>
+
+
+                    <label for="finalidade">Finalidade: <span style="color: rgb(255, 0, 0) ;"> *</span></label>
+                    <input type="text" id="finalidade" name="finalidade" required>
+                    <br><br>
+
+                    <label for="info">Principais Informações Armazenadas: <span style="color: rgb(255, 0, 0) ;">
+                            *</span></label>
+                    <textarea id="info" name="info" required></textarea>
+                    <br><br>
+
+                    <label for="func">Lista de Funcionalidades: <span style="color: rgb(255, 0, 0) ;"> *</span></label>
+                    <textarea id="func" name="func" required></textarea>
+                    <br><br>
+
+                    <label for="acessaWeb">Acessa via Web? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <input type="radio" id="simAcessaWeb" name="acessaWeb" value="Sim" required>Sim
+                    <input type="radio" id="naoAcessaWeb" name="acessaWeb" value="Não" required>Não
+                    <br><br>
+
+                    <label for="informacaoSigilosa">Possui Informação Sigilosa? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <input type="radio" id="simInfoSigilosa" name="informacaoSigilosa" value="Sim" required
+                        onclick="mostrarCampoSigiloso()">Sim
+                    <input type="radio" id="naoInfoSigilosa" name="informacaoSigilosa" value="Não" required>Não
+                    <br><br>
+
+                    <div id="campoInfoSigilosa">
+                        <label for="qualInfoSigilosa">Qual Informação Sigilosa? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                        <input type="text" id="qualInfoSigilosa" name="qualInfoSigilosa" required>
+                    </div>
+                    <br>
+
+
+                    <label for="senha_exclusiva">Possui Senha Exclusiva para Consulta? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select id="senha_exclusiva" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="manual_disponivel">Existe Manual ou Curso Disponível? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select id="manual_disponivel" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="plataforma_desenvolvimento">Plataforma de Desenvolvimento:</label>
+                    <input type="text" id="plataforma_desenvolvimento" name="plataforma_desenvolvimento">
+                    <br><br>
+
+                    <label for="plataforma_execucao">Plataforma de Execução:</label>
+                    <input type="text" id="plataforma_execucao" name="plataforma_execucao">
+                    <br><br>
+
+                    <label for="tempo_utilizacao">Tempo de Utilização:</label>
+                    <input type="text" id="tempo_utilizacao" name="tempo_utilizacao">
+                    <br><br>
+
+                    <label for="proprio_ou_contratado">Próprio ou Contratado? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select id="proprio_ou_contratado" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="tipo_contratacao">Tipo de Contratação ou Aquisição:</label>
+                    <input type="text" id="tipo_contratacao" name="tipo_contratacao">
+                    <br><br>
+
+                    <label for="tipo_contratacao">Fabricante (Nome/CNPJ):</label>
+                    <input type="text" id="tipo_contratacao" name="tipo_contratacao">
+                    <br><br>
+
+                    <label for="custo_licenciamento">Custo Anual de Licenciamento:</label>
+                    <input type="text" id="custo_licenciamento" name="custo_licenciamento">
+                    <br><br>
+
+                    <label for="numero_licencas">Número de Licenças:</label>
+                    <input type="number" name="numero_licencas" id="numero_licencas">
+                    <br><br>
+
+                    <label for="numero_contrato_e_aditivos">Número do Contrato e dos Aditivos: </label>
+                    <input type="number" name="numero_contrato_e_aditivos" id="numero_contrato_e_aditivos">
+                    <br><br>
+
+                    <label for="usuario_final">Usuário Final: <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <input type="text" id="usuario_final" name="usuario_final" required>
+                    <br><br>
+
+                    <label for="desenvolvedor">Desenvolvedor:</label>
+                    <input type="text" id="desenvolvedor" name="desenvolvedor">
+                    <br><br>
+
+                    <label for="estado_proprietario">O Estado é proprietário da solução? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select id="estado_proprietario" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="solucao_compartilhada">A solução é compartilhada com outros órgãos/
+                        instituições? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select id="solucao_compartilhada" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="solucao_em_uso">A solução está atualmente em uso? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select id="solucao_em_uso" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="tempo_de_uso">Há quanto tempo a solução é utilizada (anos)? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <input type="number" id="tempo_de_uso" name="tempo_de_uso" required>
+                    <br><br>
+
+                    <label for="como_acontece_entrada_de_dados">Como se dá a entrada de dados?</label>
+                    <input type="text" id="como_acontece_entrada_de_dados" name="como_acontece_entrada_de_dados">
+                    <br><br>
+
+                    <label for="volume_suportado">Qual o volume suportado pela solução hoje? </label>
+                    <input type="text" name="volume_suportado" id="volume_suportado">
+                    <br><br>
+
+                    <label for="suporte_de_atualizacao">Existe suporte de atualização? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select name="suporte_de_atualizacao" id="suporte_de_atualizacao" required> 
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="qm_realiza_manutencao">Quem realiza a manutenção e atualização da solução?</label>
+                    <input type="text" name="qm_realiza_manutencao" id="qm_realiza_manutencao">
+                    <br><br>
+
+                    <label for="licenca_codigo">Licença do Código:</label>
+                    <input type="text" name="licenca_codigo" id="licenca_codigo">
+                    <br><br>
+
+                    <!---->
+
+                    <label for="interfaceAoPainel">Existe interface pública que permite acesso aos dados
+                        (painel)? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <input type="radio" id="simInterfaceAoPainel" name="interfaceAoPainel" value="Sim" required
+                        onclick="mostrarCampoInterfaceAoPainel()">Sim
+                    <input type="radio" id="naoInterfaceAoPainel" name="interfaceAoPainel" value="Não" required>Não
+                    <br><br>
+
+                    <div id="qualInterfaceAoPainel">
+                        <label for="qualInterfaceAoPainel">Qual? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                        <input type="text" id="qualInterfaceAoPainel" name="qualInterfaceAoPainel" required>
+                    </div>
+                    <br><br>
+
+                    <label for="aplicacoes_api">Permite API (Aplicações)? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select name="aplicacoes_api" id="aplicacoes_api" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="permite_plugins">Permite Plugins (Extensões)? <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <select name="permite_plugins" id="permite_plugins" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                        <option value="nao_sei">Não Sei</option>
+                    </select>
+                    <br><br>
+
+                    <label for="observacoes">Observações: <span style="color: rgb(255, 0, 0);"> *</span></label>
+                    <input type="text" id="observacoes" name="observacoes" required>
+                    <br><br>
+
+
+
+
+
+                    <input type="submit" id="btnsalvar" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function mostrarCampoSigiloso() {
+                const campoInfoSigilosa = document.getElementById("campoInfoSigilosa")
+                const qualInfoSigilosa = document.getElementById("qualInfoSigilosa")
+                const simInfoSigilosa = document.getElementById("simInfoSigilosa")
+
+                if (simInfoSigilosa.checked) {
+                    campoInfoSigilosa.style.display = "block"
+                    qualInfoSigilosa.required = true
+                }
+            }
+            function ocultarCampoSigiloso() {
+                const campoInfoSigilosa = document.getElementById("campoInfoSigilosa")
+                const qualInfoSigilosa = document.getElementById("qualInfoSigilosa")
+                const naoInfoSigilosa = document.getElementById("naoInfoSigilosa")
+                if (naoInfoSigilosa.checked) {
+                    campoInfoSigilosa.style.display = "none"
+                    qualInfoSigilosa.required = false
+                    qualInfoSigilosa.value = "";
+                }
+            }
+            document.getElementById("simInfoSigilosa").addEventListener("click", mostrarCampoSigiloso)
+            document.getElementById("naoInfoSigilosa").addEventListener("click", ocultarCampoSigiloso)
+
+
+            //
+
+
+            function mostrarCampoInterfaceAoPainel() {
+                const campoInterfaceAoPainel = document.getElementById("campoInterfaceAoPainel")
+                const qualInterfaceAoPainel = document.getElementById("qualInterfaceAoPainel")
+                const simInterfaceAoPainel = document.getElementById("simInterfaceAoPainel")
+
+                if (simInterfaceAoPainel.checked) {
+                    qualInterfaceAoPainel.style.display = "block"
+                    qualInterfaceAoPainel.required = true
+                }
+            }
+            function ocultarCampoInterfaceAoPainel() {
+                const campoInterfaceAoPainel = document.getElementById("campoInterfaceAoPainel")
+                const qualInterfaceAoPainel = document.getElementById("qualInterfaceAoPainel")
+                const naoInterfaceAoPainel = document.getElementById("naoInterfaceAoPainel")
+                if (naoInterfaceAoPainel.checked) {
+                    qualInterfaceAoPainel.style.display = "none"
+                    campoInterfaceAoPainel.required = false
+                    qualInterfaceAoPainel.value = "";
+                }
+            }
+            document.getElementById("simInterfaceAoPainel").addEventListener("click", mostrarCampoInterfaceAoPainel)
+            document.getElementById("naoInterfaceAoPainel").addEventListener("click", ocultarCampoInterfaceAoPainel)
+
+
+
+
+
+
+        </script>
+        <script src="PARTE05.js"></script>
+
+
+</body>
+
+</html>
